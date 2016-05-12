@@ -52,6 +52,7 @@
 }
 .framit-container{
 	background-color: #fafafa;
+	padding-top: 50px;
 }
 .framit-footer{
 	min-height: 50px;
@@ -64,4 +65,39 @@
 	letter-spacing: 2px;
 	font-weight: 500;
 
+}
+.card-container{
+	background-color: #fff;
+	border: 1px solid #efefef;
+}
+.card-container > .card-header{
+	height: 64px;
+	padding: 14px 20px;
+	border-bottom: 1px solid #efefef;
+}
+.card-header{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+.card-header > .image{
+	margin:-1px 10px -1px -5px;
+	background-color: #fafafa;
+	border: 1px solid #dbdbdb;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.card-header > .text{
+	display: block;
+	flex-grow:1;
+	flex-shrink: 1;
+	font-size:15px;
+	font-weight: 600;
+}
+.card-header > .time{
+	color:#999;
+	font-weight: 500;
 }
