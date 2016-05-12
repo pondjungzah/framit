@@ -59,20 +59,55 @@
 							<img src="https://placehold.it/800x800" class="img-responsive" alt="">
 						</div>
 						<div class="card-body">
-							<div class="title"></div>
-							<div class="description"></div>
+							<div class="title">Genesis Lab</div>
+							<div class="description">loremLorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt rerum, cum nobis maxime. Provident, in laboriosam, et accusantium id velit alias iure explicabo sed, error, neque blanditiis architecto nulla ex!</div>
 						</div>
 						<div class="card-footer">
 							<div class="love-counter">
-								<div class="button"></div>
-								<div class="text"></div>
+								<button class="button"><i class="mdi mdi-heart-outline"></i></button>
+								<div class="text">3,000</div>
 							</div>
 							<div class="copy-url">
-								<div class="icon"></div>
-								<div class="notification"></div>
+								<button class="icon" notification="1"><i class="mdi mdi-link-variant"></i></button>
+								<div class="notification" alert="1">Copy URL to clipboard</div>
 							</div>
 						</div>
 					</div>
+					<div class="card-container">
+						<div class="card-header">
+
+							<a class="image" href="#">
+								<img src="https://placehold.it/28x28">
+							</a>
+							<a class="text" href="#">
+								tanawatchai
+							</a>
+
+							<div class="time">
+								3h
+							</div>
+						</div>
+						<div class="image">
+							<img src="https://placehold.it/800x800" class="img-responsive" alt="">
+						</div>
+						<div class="card-body">
+							<div class="title">Genesis Lab</div>
+							<div class="description">loremLorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt rerum, cum nobis maxime. Provident, in laboriosam, et accusantium id velit alias iure explicabo sed, error, neque blanditiis architecto nulla ex!</div>
+						</div>
+						<div class="card-footer">
+							<div class="love-counter">
+								<button class="button"><i class="mdi mdi-heart"></i></button>
+								<div class="text">3,000</div>
+							</div>
+							<div class="copy-url">
+								<button class="icon" notification="2"><i class="mdi mdi-link-variant"></i></button>
+								<div class="notification" alert="2">Copy URL to clipboard</div>
+							</div>
+						</div>
+					</div>
+					<button class="framit-loadmore btn-block">
+						LOAD MORE
+					</button>
 				</div>
 			</div>
 		</div>
@@ -87,8 +122,31 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script src="../assets/js/landing-transition.js"></script>
+	<script>
+		$('.love-counter > .button').click(function() {
+			var icon = $(this).find('.mdi');
+			if (icon.hasClass('mdi-heart')) {
+				icon.removeClass('mdi-heart');
+				icon.addClass('mdi-heart-outline');
+			}
+			else {
+				icon.addClass('mdi-heart');
+				icon.removeClass('mdi-heart-outline');
+			}
+		})
 
+		$('.copy-url > .icon').click(function() {
+			var noti = $(this).attr('notification');
+			var notiDOM = $('div[alert=\"' + noti + '\"]');
+
+			if(notiDOM.is(':visible')) return;
+			console.log('hi');
+			notiDOM.fadeIn(300);
+			setTimeout(function() {
+				notiDOM.fadeOut(300);
+			}, 2000)
+		})
+	</script>
 </body>
 
 </html>
