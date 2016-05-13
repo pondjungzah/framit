@@ -26,3 +26,6 @@
 .profile-info{
 	margin-bottom: 60px;
 }
+.profile-info .framit-btn-follow:last-child{
+	margin-left: 0px;
+}
